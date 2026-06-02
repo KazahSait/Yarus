@@ -1,6 +1,10 @@
 document.getElementById('contactForm').addEventListener('submit', async(e) => {
     e.preventDefault();
-
+    
+    if (e.target.website.value !== '') {
+        return;
+    }
+    
     const data = {
         name: e.target.name.value,
         phone: e.target.phone.value,
